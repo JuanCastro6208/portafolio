@@ -291,6 +291,16 @@
       border-radius: 3px;
     }
 
+    .about .image img {
+      width: 250px;
+      max-width: 100%;
+      border: 0.5rem solid var(--purple);
+      box-shadow: 
+        0 0 25px var(--neon-blue),
+        0 0 40px var(--neon-pink);
+      border-radius: 5px;
+    }
+
     .about-content {
       display: flex;
       gap: 3rem;
@@ -301,40 +311,165 @@
       flex: 1;
     }
 
+    .about-text h3{
+      font-size: 2rem;
+    }
+
     .about-text p {
       margin-bottom: 1.5rem;
       line-height: 1.6;
       color: #ccc;
     }
 
-    .skills {
-      flex: 1;
+    .about-info {
+      margin-top: 15px;
     }
 
-    .skill-item {
-      margin-bottom: 1.5rem;
+    .about-info h4 {
+      margin: 5px 0;
+      font-weight: 500;
+      color: #ddd;
     }
 
-    .skill-name {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.5rem;
+    .about-info span {
+      font-weight: normal;
+      color: #ccc;
     }
 
-    .skill-bar {
-      height: 10px;
-      background-color: #333;
-      border-radius: 5px;
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(0, 136, 255, 0.5);
+      position: relative;
       overflow: hidden;
     }
 
-    .skill-progress {
-      height: 100%;
-      border-radius: 5px;
-      background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
-      animation: fillBar 2s ease-out forwards;
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(0, 136, 255, 0.8);
     }
 
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: 0.5s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .skill-container{
+      padding: 2rem 0;
+    }
+
+    .tittle-skills {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .tittle-skills::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+      border-radius: 3px;
+    }
+
+    .skill-container{
+      padding: 2rem 0;
+    }
+
+    .skills{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    .skill-item{
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 30rem;
+      flex: 1 1 30rem;
+      margin-right: 1.5rem;
+    }
+
+    .skill-item .box{
+      padding:1rem 0;
+    }
+
+    .skill-item .box h3{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding:.7rem 0;
+      font-size: 1.2rem;
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    .skill-item .box .progress-bar{
+      width:100%;
+      background:#333;
+      overflow:hidden;
+      height: 0.5rem;
+      border-radius: 50rem;
+    }
+
+    .skill-item .box .progress-bar span{
+      display:block;
+      height:100%;
+      background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));;
+    }
+
+    .skill-item.item1 .box:nth-child(1) .progress-bar span{
+      width:95%;
+    }
+
+    .skill-item.item1 .box:nth-child(2) .progress-bar span{
+      width:90%;
+    }
+
+    .skill-item.item1 .box:nth-child(3) .progress-bar span{
+      width:85%;
+    }
+
+    .skill-item.item2 .box:nth-child(1) .progress-bar span{
+      width:75%;
+    }
+
+    .skill-item.item2 .box:nth-child(2) .progress-bar span{
+      width:65%;
+    }
+
+    .skill-item.item2 .box:nth-child(3) .progress-bar span{
+      width:60%;
+    }
     /* Projects Section */
 
     .projects {
