@@ -116,6 +116,26 @@
       line-height: 1.6;
       color: #ccc;
     }
+ 
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.8rem; 
+      color: #ccc;
+    }
+
+    .contact-line i {
+      margin-right: 0.9rem;
+    }
+
+    #hero-whatsapp-link {
+      color: #ccc;              
+      text-decoration: none;    
+    }
+
+    #hero-whatsapp-link:hover {
+      color: var(--neon-pink);              
+    }
 
     .cta-button {
       display: inline-block;
@@ -252,7 +272,45 @@
       }   
     }
 
-    /* About Section */
+/* Estilos base para ambos banners */
+    .banner .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .banner-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .banner-content h3 {
+      font-size: 24px;
+      margin: 0;
+      color: #ffffff;
+    }
+
+    .banner-content p {
+      font-size: 16px;
+      margin: 0;
+      color: #ccc;
+    }
+
+    #banner1 {
+      padding: 5rem 5%;
+      background-color: var(--darker-bg);
+      position: relative; 
+    }
+
+    #banner2 {
+      padding: 5rem 5%;
+      background-color: var(--dark-bg);
+      position: relative; 
+    }
+
+/* About Section */
 
     .about {
       padding: 5rem 5%;
@@ -325,7 +383,7 @@
       margin-top: 15px;
     }
 
-    .about-info h4 {
+    .about-info p {
       margin: 5px 0;
       font-weight: 500;
       color: #ddd;
@@ -459,16 +517,39 @@
       width:85%;
     }
 
-    .skill-item.item2 .box:nth-child(1) .progress-bar span{
+    .skill-item.item1 .box:nth-child(4) .progress-bar span{
       width:75%;
     }
 
-    .skill-item.item2 .box:nth-child(2) .progress-bar span{
+    .skill-item.item1 .box:nth-child(5) .progress-bar span{
       width:65%;
     }
 
+    .skill-item.item1 .box:nth-child(6) .progress-bar span{
+      width:40%;
+    }
+
+    .skill-item.item2 .box:nth-child(1) .progress-bar span{
+      width:90%;
+    }
+
+    .skill-item.item2 .box:nth-child(2) .progress-bar span{
+      width:85%;
+    }
+
     .skill-item.item2 .box:nth-child(3) .progress-bar span{
-      width:60%;
+      width:80%;
+    }
+    .skill-item.item2 .box:nth-child(4) .progress-bar span{
+      width:80%;
+    }
+
+    .skill-item.item2 .box:nth-child(5) .progress-bar span{
+      width:80%;
+    }
+
+    .skill-item.item2 .box:nth-child(6) .progress-bar span{
+      width:70%;
     }
     /* Projects Section */
 
@@ -479,7 +560,7 @@
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
       gap: 2rem;
       margin-top: 2rem;
     }

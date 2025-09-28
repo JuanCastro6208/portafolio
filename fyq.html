@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Preguntas Frecuentes — FYQ</title>
+  <link rel="stylesheet" href="assets/css/fyq.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Preguntas Frecuentes (FAQ)</h1>
+      <p>Encuentra respuestas rápidas. Haz clic en cada pregunta para expandir la respuesta.</p>
+    </header>
+
+    <!-- Índice -->
+    <nav class="faq-index">
+      <h2>Índice</h2>
+      <ul>
+        <li><a href="#q1">¿Cómo contacto al estudiante para trabajos o prácticas?</a></li>
+        <li><a href="#q2">¿Aceptas colaboraciones externas o contribuciones?</a></li>
+        <li><a href="#q3">¿Dónde puedo ver el portafolio completo y los proyectos?</a></li>
+      </ul>
+    </nav>
+
+    <!-- FAQ -->
+    <main class="accordion" id="faq-list" aria-live="polite">
+
+      <!-- Item 1 -->
+      <section class="item" id="q1">
+        <button class="trigger" aria-expanded="false" aria-controls="a1">
+          <span>¿Cómo contacto al estudiante para trabajos o prácticas?</span>
+          <span class="chev" aria-hidden="true">▾</span>
+        </button>
+        <div id="a1" class="content" role="region" aria-labelledby="q1">
+          <p>Puedes contactar al estudiante usando el correo electrónico que aparece en la página de contacto o a través del formulario del portafolio.</p>
+        </div>
+      </section>
+
+      <!-- Item 2 -->
+      <section class="item" id="q2">
+        <button class="trigger" aria-expanded="false" aria-controls="a2">
+          <span>¿Aceptas colaboraciones externas o contribuciones a proyectos?</span>
+          <span class="chev" aria-hidden="true">▾</span>
+        </button>
+        <div id="a2" class="content" role="region" aria-labelledby="q2">
+          <p>Sí — el estudiante acepta colaboraciones según la disponibilidad y el encaje del proyecto.</p>
+        </div>
+      </section>
+
+      <!-- Item 3 -->
+      <section class="item" id="q3">
+        <button class="trigger" aria-expanded="false" aria-controls="a3">
+          <span>¿Dónde puedo ver el portafolio completo y los proyectos?</span>
+          <span class="chev" aria-hidden="true">▾</span>
+        </button>
+        <div id="a3" class="content" role="region" aria-labelledby="q3">
+          <p>El portafolio completo está en la página principal (home/index). Allí encontrarás enlaces a cada proyecto y descripciones.</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="assets/js/fyq.js"></script>
+</body>
+</html>

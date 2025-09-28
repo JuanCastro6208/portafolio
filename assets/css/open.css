@@ -1,0 +1,123 @@
+/* Paleta global */
+:root {
+    --neon-pink: #56cfe1;
+    --neon-purple: #72efdd;
+    --neon-green: #80ffdb;
+    --dark-bg: #010101;
+    --darker-bg: #0a0a0a;
+    --text-color: #eee;
+    --neon-blue: #5390d9;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 1.5rem;
+    background: var(--darker-bg);
+    text-align: center;
+}
+
+header h1 {
+    color: var(--neon-blue);
+    font-size: 2rem;
+}
+h2 {
+    color: var(--neon-blue);
+    font-size: 1.5rem;
+}
+
+.grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    display: grid;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+    background: var(--darker-bg);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-content h2 {
+    margin: 0.5rem 0;
+    color: var(--neon-pink);
+}
+
+.summary {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.description {
+    margin: 0.5rem 0 1rem;
+    font-size: 0.9rem;
+}
+
+.keywords {
+    color: var(--neon-purple);
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+}
+
+/* === Botón estilo index === */
+.cta-button {
+    padding: 0.8rem 2rem;
+    background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 136, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+}
+
+.cta-button:hover {
+    box-shadow: 0 0 25px rgba(0, 136, 255, 0.8);
+    transform: translateY(-3px);
+}
+
+.cta-button::before {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+    content: '';
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+

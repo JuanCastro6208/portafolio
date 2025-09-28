@@ -1,0 +1,112 @@
+:root {
+  --neon-blue: #5390d9;
+  --neon-pink: #56cfe1;
+  --neon-purple: #72efdd;
+  --neon-green: #80ffdb;
+  --dark-bg: #010101;
+  --darker-bg: #0a0a0a;
+  --text-color: #eee;
+  --muted: rgba(238,238,238,0.65);
+  --radius: 12px;
+  --gap: 1rem;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(180deg, var(--dark-bg), var(--darker-bg));
+  color: var(--text-color);
+  padding: 2rem;
+}
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255,255,255,0.02);
+  border-radius: 16px;
+}
+
+/* Encabezado */
+header h1 { margin: 0 0 .5rem; }
+header p { margin: 0 0 1rem; color: var(--muted); }
+
+/* Índice */
+.faq-index {
+  margin: 1.5rem 0 2rem;
+  padding: 1rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.02);
+}
+
+.faq-index h2 {
+  margin: 0 0 .8rem;
+  font-size: 1.2rem;
+  color: var(--neon-blue);
+}
+
+.faq-index ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.faq-index li {
+  margin: .5rem 0;
+}
+
+.faq-index a {
+  color: var(--neon-green);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.faq-index a:hover {
+  color: var(--neon-pink);
+  text-decoration: underline;
+}
+
+/* Acordeón */
+.accordion { display: grid; gap: var(--gap); }
+
+.item {
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.trigger {
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  font-weight: bold;
+  background: transparent;
+  border: 0;
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.chev {
+  transition: transform .3s ease;
+}
+
+.content {
+  padding: 0 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease, padding .3s ease;
+  color: var(--muted);
+}
+
+.item.is-open .content {
+  max-height: 500px;
+  padding: 1rem;
+}
+
+.item.is-open .chev {
+  transform: rotate(180deg);
+}
